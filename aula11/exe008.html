@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olá, Mundo: Turismos</title>
+    <style>
+        body{
+            background-color: blue;
+            font: normal 18px Arial;
+            color: orange;
+        }
+        div#res{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    <p>Nacionalidade:</p><input type="text" name="txtnac" id="txtnac">
+    <input type="button" value="confirmar" onclick="aceito()">
+    <div id="res">Situação</div>
+
+    <script>
+        
+        function aceito(){
+            var txt = window.document.getElementById('txtnac')
+            var txt2 = String(txt.value)
+            var res = window.document.getElementById('res')
+            var con = window.document.getElementById('conf')
+            
+            if (txt2 == 'Brasil' || txt2 == 'brasil'){
+                res.innerHTML = `<p>Você é Brasileiro.</p>`
+                window.confirm('corfimar informação')
+            }
+            else{
+                res.innerHTML = `<p>Você é estrangeiro. Você é do(a) ${txt2.toUpperCase()}.</p>`
+                window.confirm('corfimar informação')
+            }
+        }
+    </script>
+</body>
+</html>
